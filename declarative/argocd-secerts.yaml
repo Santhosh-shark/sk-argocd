@@ -6,6 +6,6 @@ metadata:
   labels:
     argocd.argoproj.io/secret-type: repository
 stringData:
-  url: https://github.com/kirupakaran369/agrocd-demo.git
-  password: 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
-  username: kirupakaran369
+  url: https://github.com/Santhosh-shark/sk-argocd.git
+  password: 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
+  username: Santhosh-shark
