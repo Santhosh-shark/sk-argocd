@@ -6,7 +6,7 @@ metadata:
   namespace: argocd
 spec:
   sourceRepos:
-  - https://github.com/kirupakaran369/agrocd-demo.git
+  - https://github.com/Santhosh-shark/sk-argocd.git
   destinations:
   - namespace: argocd
     server: https://kubernetes.default.svc
@@ -24,9 +24,9 @@ metadata:
 spec:
   project: project-alpha
   source:
-    repoURL: https://github.com/kirupakaran369/agrocd-demo.git
+    repoURL: https://github.com/Santhosh-shark/sk-argocd.git
     targetRevision: master
-    path: Application/Jenkins
+    path: demoapp
   destination:
     server: https://kubernetes.default.svc
     namespace: jenkins
