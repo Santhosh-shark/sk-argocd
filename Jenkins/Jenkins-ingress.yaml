@@ -12,7 +12,7 @@ metadata:
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:eu-west-1:600167738142:certificate/3fcecbf7-dcf4-488b-92ec-ff02b95534fd
     alb.ingress.kubernetes.io/security-groups: sg-0b05867cd639807e4
     alb.ingress.kubernetes.io/ssl-redirect: '443'
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'
 spec:
   rules:
   - host: sk-jenkin.pcf.asgardmap.net
