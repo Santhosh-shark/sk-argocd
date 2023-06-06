@@ -14,12 +14,13 @@ metadata:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
 spec:
   rules:
-    - http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: jenkin-svc
-                port:
-                  number: 443
+  - host: sk-jenkin.pcf.asgardmap.net
+    http:
+      paths:
+      - path: /
+           pathType: Prefix
+           backend:
+             service:
+               name: jenkin-svc
+               port:
+                 number: 5000
