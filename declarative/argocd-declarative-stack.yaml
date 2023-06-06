@@ -12,6 +12,8 @@ spec:
     server: https://kubernetes.default.svc
   - namespace: jenkins
     server: https://kubernetes.default.svc
+  - namespace: jenkin
+    server: https://kubernetes.default.svc
   clusterResourceWhitelist:
   - group: '*'
     kind: '*'
@@ -30,6 +32,25 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: jenkins
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: project-jenkins
+  namespace: argocd
+spec:
+  project: project-alpha
+  source:
+    repoURL: https://github.com/Santhosh-shark/sk-argocd.git
+    targetRevision: master
+    path: Jenkins
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: jenkin
   syncPolicy:
     automated:
       prune: true
