@@ -14,7 +14,7 @@ metadata:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
 spec:
   rules:
-  - host: sk-jenkin.pcf.asgardmap.net
+  #- host: sk-jenkin.pcf.asgardmap.net
     http:
       paths:
       - path: /
