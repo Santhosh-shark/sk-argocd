@@ -21,6 +21,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: jenkin-svc
+                name: jenkin-service
                 port:
                   number: 5000
